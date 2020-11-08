@@ -1,0 +1,14 @@
+variable gcp_project {}
+variable gcp_region {}
+variable gcp_vpc_name {}
+variable gcp_subnet_name {}
+variable gcp_subnet_cidr {}
+variable gcp_pod_cidr {}
+variable num_controllers {}
+variable num_workers {}
+variable gcp_machine_type_controller {}
+variable gcp_machine_type_worker {}
+variable gcp_zone_suffix {}
+variable gcp_image_project {}
+variable gcp_image_family {}
+variable gcp_scopes {}
