@@ -5,7 +5,7 @@ In this lab you will install the command line utilities required to complete thi
 
 ## Install CFSSL
 
-The `cfssl` and `cfssljson` command line utilities will be used to provision a [PKI Infrastructure](https://en.wikipedia.org/wiki/Public_key_infrastructure) and generate TLS certificates.
+The `cfssl` and `cfssljson` command line utilities, provided by CloudFlare, will be used to provision a [PKI Infrastructure](https://en.wikipedia.org/wiki/Public_key_infrastructure) and generate TLS certificates.
 
 Download and install `cfssl` and `cfssljson`:
 
@@ -32,11 +32,22 @@ brew install cfssl
 
 ### Linux
 
+From CloudFlare's releases page:
+
+```
+curl -L -s https://github.com/cloudflare/cfssl/releases/download/v1.5.0/cfssl_1.5.0_linux_amd64 > cfssl
+curl -L -s https://github.com/cloudflare/cfssl/releases/download/v1.5.0/cfssljson_1.5.0_linux_amd64 > cfssljson
+```
+
+Or, from the original instructions:
+
 ```
 wget -q --show-progress --https-only --timestamping \
   https://storage.googleapis.com/kubernetes-the-hard-way/cfssl/1.4.1/linux/cfssl \
   https://storage.googleapis.com/kubernetes-the-hard-way/cfssl/1.4.1/linux/cfssljson
 ```
+
+Then:
 
 ```
 chmod +x cfssl cfssljson
@@ -88,6 +99,10 @@ sudo mv kubectl /usr/local/bin/
 ```
 
 ### Linux
+
+Follow instructions from https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
+
+or
 
 ```
 wget https://storage.googleapis.com/kubernetes-release/release/v1.18.6/bin/linux/amd64/kubectl
